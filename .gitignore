@@ -127,3 +127,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Customs
+poissons/data/*
+dataviz/_build
