@@ -32,6 +32,6 @@ nbclient.exceptions.CellTimeoutError: A cell timed out while it was being execut
 The message was: Cell execution timed out.
 Here is a preview of the cell contents:
 -------------------
-!pip install pandas seaborn dataprep
+!wget "https://data.gouv.nc/explore/dataset/rp-2019-indv-psud/download/?format=csv&timezone=Pacific/Noumea&lang=fr&use_labels_for_header=true&csv_separator=%2C" -O data/recensement_individus.csv
 -------------------
 
