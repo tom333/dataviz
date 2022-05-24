@@ -5,3 +5,5 @@ format: jb-book
 root: intro
 chapters:
 - file: poissons
+- file: barometre_jeunes_2019
+- file: recensement
