@@ -51,11 +51,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="BAROMÈTRE SANTÉ JEUNE 2019 (BSJ-2019)" href="barometre_jeunes_2019.html" />
     <link rel="prev" title="Démo de dataviz" href="intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -104,16 +101,6 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    COMPTAGE DES POISSONS DE LA PROVINCE DES ILES DEPUIS 2004
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="barometre_jeunes_2019.html">
-   BAROMÈTRE SANTÉ JEUNE 2019 (BSJ-2019)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="recensement.html">
-   Recensement
   </a>
  </li>
 </ul>
@@ -419,9 +406,12 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--2022-05-13 04:03:43--  https://data.gouv.nc/explore/dataset/comptage-des-poissons-de-la-province-des-iles-depuis-2004/download/?format=csv&amp;timezone=Pacific/Noumea&amp;lang=fr&amp;use_labels_for_header=true&amp;csv_separator=%2C
-Resolving data.gouv.nc (data.gouv.nc)... 13.211.119.48, 13.55.171.246
-Connecting to data.gouv.nc (data.gouv.nc)|13.211.119.48|:443... 
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--2022-05-24 05:18:33--  https://data.gouv.nc/explore/dataset/comptage-des-poissons-de-la-province-des-iles-depuis-2004/download/?format=csv&amp;timezone=Pacific/Noumea&amp;lang=fr&amp;use_labels_for_header=true&amp;csv_separator=%2C
+Resolving data.gouv.nc (data.gouv.nc)... 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>13.55.171.246, 13.211.119.48
+Connecting to data.gouv.nc (data.gouv.nc)|13.55.171.246|:443... 
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>connected.
@@ -438,12 +428,15 @@ Saving to: ‘data/poissons.csv’
 data/poissons.csv       [&lt;=&gt;                 ]       0  --.-KB/s               
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>data/poissons.csv       [ &lt;=&gt;                ] 100.63K   258KB/s               
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>data/poissons.csv       [ &lt;=&gt;                ]  84.64K   423KB/s               
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>data/poissons.csv       [  &lt;=&gt;               ] 231.76K   396KB/s    in 0.6s    
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>data/poissons.csv       [  &lt;=&gt;               ] 148.62K   309KB/s               
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>data/poissons.csv       [   &lt;=&gt;              ] 231.76K   352KB/s    in 0.7s    
 
-2022-05-13 04:03:45 (396 KB/s) - ‘data/poissons.csv’ saved [237323]
+2022-05-24 05:18:36 (352 KB/s) - ‘data/poissons.csv’ saved [237323]
 </pre></div>
 </div>
 </div>
@@ -470,11 +463,11 @@ data/poissons.csv       [&lt;=&gt;                 ]       0  --.-KB/s
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   Campagne      Site    Station  Transect Type de poisson (Code)  Décompte
-0      2004  Luengoni  Jo ne weg         1                    API         2
-1      2004  Luengoni  Jo ne weg         2                    PAP         0
-2      2004  Luengoni  Jo ne weg         2                    ALO         2
-3      2004  Luengoni  Jo ne weg         3                    BEB         0
-4      2004  Luengoni  Jo ne weg         3                    APE         2
+0      2004  Luengoni  Jo ne weg         1                    ALO         0
+1      2004  Luengoni  Jo ne weg         1                    AGL         0
+2      2004  Luengoni  Jo ne weg         1                    DAW         0
+3      2004  Luengoni  Jo ne weg         1                    BLE         0
+4      2004  Luengoni  Jo ne weg         2                    BEB         0
 Campagne                     int64
 Site                      category
 Station                   category
@@ -525,14 +518,14 @@ Nombre de site : 14
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Type de poisson (Code)  Décompte  Transect
-0                    API         2         1
-1                    PAP         0         2
-2                    ALO         2         2
-3                    BEB         0         3
-4                    APE         2         3
+0                    ALO         0         1
+1                    AGL         0         1
+2                    DAW         0         1
+3                    BLE         0         1
+4                    BEB         0         2
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x7fa1350337f0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x7f8adb4a6730&gt;
 </pre></div>
 </div>
 <img alt="_images/poissons_7_2.png" src="_images/poissons_7_2.png" />
@@ -699,13 +692,6 @@ Nombre de site : 14
             <p class="prev-next-subtitle">previous</p>
             <p class="prev-next-title">Démo de dataviz</p>
         </div>
-    </a>
-    <a class='right-next' id="next-link" href="barometre_jeunes_2019.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">BAROMÈTRE SANTÉ JEUNE 2019 (BSJ-2019)</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
     </a>
 </div>
             
